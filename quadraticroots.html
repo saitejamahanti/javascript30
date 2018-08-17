@@ -1,0 +1,41 @@
+<html>
+ <head>
+<script type="text/javascript">
+function res() 
+{
+var a=parseInt(document.getElementById("a").value);
+var b=parseInt(document.getElementById("b").value);
+var c=parseInt(document.getElementById("c").value);
+var det=(b*b)-(4*a*c);
+if(det>0)
+{
+	var root1 = (-b + Math.sqrt(det)) / (2 * a);
+	var root2 = (-b - Math.sqrt(det)) / (2 * a);
+	document.write(root1);
+	document.write(root2);
+}
+else if(det==0)
+{
+	var root1,root2;
+	root1 = root2 = -b / (2 * a);
+	document.write(root1);
+	document.write(root2);	
+}
+else
+{
+	var real = -b / (2 *a);
+	var imag = Math.sqrt(-det) / (2 * a);
+	document.write(real+"+"+imag);
+	document.write(real+"-"+imag);
+}
+}
+</script>
+</head>
+<body>
+<h3>Quadratic Equation</h3>
+ Enter a value:<input type="text"  id="a" /><br>
+ Enter b value:<input type="text"  id="b" /><br>
+ Enter c value:<input type="text"  id="c" /><br>
+<input type="button"  value="result" onClick="res()"/>
+ </body>
+</html>

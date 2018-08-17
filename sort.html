@@ -1,0 +1,16 @@
+<html>
+<head>
+<script type="text/javascript">
+function sort(){
+var s=document.getElementById("v").value;
+var a=s.split(" ");
+document.write(a.sort(function(a,b){return a-b}));
+}
+</script>
+</head>
+<body>
+<h3>SORTING</h3>
+Enter values:<input type="text"  id="v" /><br>
+<input type="button"  value="sort" onclick="sort()"/>
+</body>
+</html>
